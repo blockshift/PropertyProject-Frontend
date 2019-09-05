@@ -11,12 +11,14 @@ import  { LoginComponent } from '../pages/login/login.component';
 import { InvestordashboardComponent } from '../pages/investor/investordashboard/investordashboard.component';
 import { DeveloperdashboardComponent } from '../pages/developer/developerdashboard/developerdashboard.component';
 import { ProeprtyDetailsComponent } from '../pages/property/proeprty-details/proeprty-details.component';
+import { AddpropertyComponent } from '../pages/developer/addproperty/addproperty.component';
 
 const VERTICAL_ROUTES: Routes = [
   { path: 'main', component: MainPageComponentnt },
   {path: 'investor',component: InvestordashboardComponent},
   {path: 'developer',component: DeveloperdashboardComponent },
   {path: 'property/:id',component: ProeprtyDetailsComponent},
+  {path: 'addproperty', component: AddpropertyComponent},
   { path: '**', component: Page404Component },
   
 ];

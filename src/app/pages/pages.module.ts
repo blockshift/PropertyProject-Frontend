@@ -14,6 +14,7 @@ import { SignupComponent } from './signup/signup.component';
 import { InvestordashboardComponent } from './investor/investordashboard/investordashboard.component';
 import { DeveloperdashboardComponent } from './developer/developerdashboard/developerdashboard.component';
 import { ProeprtyDetailsComponent } from './property/proeprty-details/proeprty-details.component';
+import { AddpropertyComponent } from './developer/addproperty/addproperty.component';
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { ProeprtyDetailsComponent } from './property/proeprty-details/proeprty-d
     SignupComponent,
     InvestordashboardComponent,
     DeveloperdashboardComponent,
-    ProeprtyDetailsComponent
+    ProeprtyDetailsComponent,
+    AddpropertyComponent
   ],
   exports: [ ],
   entryComponents: [ ]

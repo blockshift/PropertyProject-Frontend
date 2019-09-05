@@ -1,0 +1,68 @@
+<h2 class="h4 mt-0 mb-1">Add Property</h2>
+<p [tcColor]="'#8f8f90'">Submit this form to add property to marketplace</p>
+
+<div class="row">
+<div class="col-12 col-md-8">
+<form [formGroup]="form"  novalidate>
+  <tc-form-group>
+    <tc-input [placeholder]="'Property Name'" formControlName="propertyname" ></tc-input>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-input [placeholder]="'Little description about property'" formControlName="propertydescription" >    </tc-input>
+  </tc-form-group>
+
+  <tc-form-group>
+ <tc-select [placeholder]="'Property Status'" [options]="data" formControlName="propertystatus" ></tc-select>
+ 
+  </tc-form-group>
+
+  
+ <tc-form-group>
+    <tc-input [placeholder]="'Location'" formControlName="propertylocation" ></tc-input>
+  </tc-form-group>
+
+ <tc-form-group>
+    <tc-input [placeholder]="'Required Funding'" formControlName="requiredfunding" ></tc-input>
+  </tc-form-group>
+
+ <tc-form-group>
+    <tc-input [placeholder]="'Tell us a bit about you'" formControlName="developerdescription" ></tc-input>
+  </tc-form-group>
+
+ <tc-form-group>
+    <tc-input [placeholder]="'Website link'" formControlName="websiteurl" ></tc-input>
+  </tc-form-group>
+
+ <tc-form-group>
+    <tc-input [placeholder]="'Current Investors'" [type]="'number'" formControlName="currentinvestors" ></tc-input>
+  </tc-form-group>
+
+<tc-form-group class="avatar-box">
+        <input type="file" accept="image/*" (change)="onFileChanged($event)" #fileInput hidden>
+
+        <tc-avatar [src]="currentAvatar"></tc-avatar>
+        <button tc-button [type]="'button'"  [view]="'accent'" [outline]="true" (click)="fileInput.click()">
+          Select image
+        </button>
+      </tc-form-group>
+ 
+
+
+<div class="row" style="padding-top: 3rem;">
+  <div class="col-sm-6">
+    <button (click)="addproperty()" tc-button [block]="true" [view]="'accent'" [beforeIcon]="'icofont-login'" [disabled]="form.invalid">
+      Add Property
+    </button>
+</div>
+<div class="col-sm-6">
+     <button (click)="resetform()" tc-button [block]="true" [view]="'accent'" [beforeIcon]="'icofont-login'" >
+      Reset
+    </button>
+
+  </div>
+</div>
+</form>
+
+</div>
+</div>

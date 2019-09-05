@@ -16,3 +16,10 @@ export interface IOption {
   label: string;
   disabled?: boolean;
 }
+
+export interface propertystatus {
+  value: string;
+  label: string;
+  disabled?: boolean;
+
+}
