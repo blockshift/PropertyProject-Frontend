@@ -41,7 +41,8 @@
     "fullcalendar": "3.6.1",
     "animate.css": "3.7.0",
     "web-animations-js": "2.3.1",
-    "@types/jquery": "3.3.29"
+    "@types/jquery": "3.3.29",
+    "angular-super-validator": "^2.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.12.3",

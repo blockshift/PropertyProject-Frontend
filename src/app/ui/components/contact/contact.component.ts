@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding, Input } from '@angular/core';
 import { IUser } from '../../interfaces/user';
+import { IProperty } from '../../interfaces/property-data';
 
 @Component({
   selector: 'tc-contact',
@@ -9,7 +10,7 @@ import { IUser } from '../../interfaces/user';
 export class TCContactComponent implements OnInit {
 	@HostBinding('class.tc-contact') true;
 
-	@Input() data: IUser;
+	@Input() data: IProperty;
 
   constructor() {}
 

@@ -1,0 +1,34 @@
+
+
+<h2 class="h4 mt-0 mb-1">Login form</h2>
+<p [tcColor]="'#8f8f90'">Login to access your Account</p>
+
+<form [formGroup]="form"  novalidate>
+  <tc-form-group>
+    <tc-input [placeholder]="'Login'" formControlName="username" ></tc-input>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-input [placeholder]="'Password'" [type]="'password'" formControlName="password" ></tc-input>
+  </tc-form-group>
+
+  <tc-form-group>
+ <tc-select [placeholder]="'Select one option'" [options]="data" formControlName="role" ></tc-select>
+ 
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-switcher [value]="true">Remember me</tc-switcher>
+  </tc-form-group>
+
+  <div class="actions justify-content-between">
+    <button (click)="login()" tc-button [view]="'accent'" [beforeIcon]="'icofont-login'" [disabled]="form.invalid">
+      Login
+    </button>
+  </div>
+</form>
+
+
+<p class="mt-5 mb-1"><a [routerLink]="['../','reset']" href="#">Forgot password?</a></p>
+<p>Don't have an account? <a >Sign up!</a></p>
+

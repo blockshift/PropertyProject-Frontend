@@ -9,3 +9,10 @@ export interface IPatient {
   status: string;
   lastVisit: string;
 }
+
+
+export interface IOption {
+  value: string;
+  label: string;
+  disabled?: boolean;
+}

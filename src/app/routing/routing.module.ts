@@ -7,14 +7,24 @@ import { PublicLayoutComponent } from '../layout/public';
 
 import { MainPageComponentnt } from '../pages/main';
 import { Page404Component } from '../pages/page-404';
+import  { LoginComponent } from '../pages/login/login.component';
+import { InvestordashboardComponent } from '../pages/investor/investordashboard/investordashboard.component';
+import { DeveloperdashboardComponent } from '../pages/developer/developerdashboard/developerdashboard.component';
+import { ProeprtyDetailsComponent } from '../pages/property/proeprty-details/proeprty-details.component';
 
 const VERTICAL_ROUTES: Routes = [
   { path: 'main', component: MainPageComponentnt },
-
-  { path: '**', component: Page404Component }
+  {path: 'investor',component: InvestordashboardComponent},
+  {path: 'developer',component: DeveloperdashboardComponent },
+  {path: 'property/:id',component: ProeprtyDetailsComponent},
+  { path: '**', component: Page404Component },
+  
 ];
 
 const PUBLIC_ROUTES: Routes = [
+
+  {path: 'login', component: LoginComponent }
+
 
 ];
 

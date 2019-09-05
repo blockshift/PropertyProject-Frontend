@@ -23,7 +23,7 @@ import { appSettingsReducer } from './store/reducers/app-settings.reducer';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    RouterModule.forRoot(ROUTES, { useHash: true }),
+    RouterModule.forRoot(ROUTES, { useHash: false }),
     StoreModule.forRoot({
       pageData: pageDataReducer,
       appSettings: appSettingsReducer,

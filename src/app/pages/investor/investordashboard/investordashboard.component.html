@@ -1,0 +1,15 @@
+
+<div class="row">
+<h3>All Properties</h3>
+
+</div>
+
+
+<div class="row">
+  <div class="col-12 col-md-4" *ngFor="let property of propertydata; let i = index; let l = last">
+    <tc-contact
+      [data]="property"
+      [ngClass]="{ 'mb-0': l, 'mb-md-0': (i + 2) === property.length || (i + 3) === property.length }"
+    ></tc-contact>
+  </div>
+</div>
