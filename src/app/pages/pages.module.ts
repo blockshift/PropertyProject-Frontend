@@ -15,6 +15,7 @@ import { InvestordashboardComponent } from './investor/investordashboard/investo
 import { DeveloperdashboardComponent } from './developer/developerdashboard/developerdashboard.component';
 import { ProeprtyDetailsComponent } from './property/proeprty-details/proeprty-details.component';
 import { AddpropertyComponent } from './developer/addproperty/addproperty.component';
+import { PropertymanagerComponent } from './developer/propertymanager/propertymanager.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { AddpropertyComponent } from './developer/addproperty/addproperty.compon
     InvestordashboardComponent,
     DeveloperdashboardComponent,
     ProeprtyDetailsComponent,
-    AddpropertyComponent
+    AddpropertyComponent,
+    PropertymanagerComponent
   ],
   exports: [ ],
   entryComponents: [ ]

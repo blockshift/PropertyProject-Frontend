@@ -12,16 +12,27 @@ import { InvestordashboardComponent } from '../pages/investor/investordashboard/
 import { DeveloperdashboardComponent } from '../pages/developer/developerdashboard/developerdashboard.component';
 import { ProeprtyDetailsComponent } from '../pages/property/proeprty-details/proeprty-details.component';
 import { AddpropertyComponent } from '../pages/developer/addproperty/addproperty.component';
+import { PropertymanagerComponent } from '../pages/developer/propertymanager/propertymanager.component';
 
 const VERTICAL_ROUTES: Routes = [
   { path: 'main', component: MainPageComponentnt },
   {path: 'investor',component: InvestordashboardComponent},
-  {path: 'developer',component: DeveloperdashboardComponent },
   {path: 'property/:id',component: ProeprtyDetailsComponent},
+  {path: 'propertymanager',component: PropertymanagerComponent },
   {path: 'addproperty', component: AddpropertyComponent},
   { path: '**', component: Page404Component },
   
 ];
+
+// const DEVELOPER_ROUTES: Routes = [
+//   {path: 'propertymanager',component: DeveloperdashboardComponent },
+//   {path: 'addproperty', component: AddpropertyComponent},
+
+// ];
+
+
+
+
 
 const PUBLIC_ROUTES: Routes = [
 
@@ -41,6 +52,11 @@ export const ROUTES: Routes = [
     component: VerticalLayoutComponent,
     children: VERTICAL_ROUTES
   },
+  // {
+  //   path: 'developer',
+  //   component: VerticalLayoutComponent,
+  //   children: DEVELOPER_ROUTES
+  // },
   {
     path: 'public',
     component: PublicLayoutComponent,

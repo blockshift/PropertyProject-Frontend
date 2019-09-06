@@ -1,9 +1,34 @@
 [
-  {
-    "title": "Main page",
+  
+
+	{
+    "title": "Vendor",
     "icon": {
-      "class": "icofont-thermometer-alt"
+      "class": "icofont-business-man"
     },
-    "routing": "main"
+    "sub": [
+      {
+        "title": "Add Property",
+        "icon": {
+          "class": "icofont-thermometer-alt"
+        },
+        "routing": "addproperty"
+      },
+      {
+        "title": "Property Manager",
+        "icon": {
+          "class": "icofont-thermometer-alt"
+        },
+        "routing": "propertymanager"
+      }
+    ]
+  },
+
+  {
+  	"title": "Marketplace",
+  	"icon": {
+  		"class": "icofont-thermometer-alt"
+  	},
+  	"routing": "investor"
   }
 ]

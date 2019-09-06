@@ -58,9 +58,9 @@ export class LoginComponent implements OnInit {
 
 		   }
 
-	   else if (this.form.value.role == 'Builder')
+	   else if (this.form.value.role == 'Developer')
 		   {
-		   	this.router.navigateByUrl('/vertical/developer');
+		   	this.router.navigateByUrl('/vertical/developer/propertymanager');
 		   }
 
   }
