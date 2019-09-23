@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { VerticalLayoutComponent } from '../layout/vertical';
-//import { HorizontalLayoutComponent } from '../layout/horizontal';
+
 import { PublicLayoutComponent } from '../layout/public';
 
 import { MainPageComponentnt } from '../pages/main';
@@ -13,6 +13,10 @@ import { DeveloperdashboardComponent } from '../pages/developer/developerdashboa
 import { ProeprtyDetailsComponent } from '../pages/property/proeprty-details/proeprty-details.component';
 import { AddpropertyComponent } from '../pages/developer/addproperty/addproperty.component';
 import { PropertymanagerComponent } from '../pages/developer/propertymanager/propertymanager.component';
+import { SignupComponent } from '../pages/signup/signup.component';
+import  { DeveloperdetailsComponent } from '../pages/developer/developerdetails/developerdetails.component';
+import { AuthGuardService } from '../services/AuthGuard/auth-guard.service';
+
 
 const VERTICAL_ROUTES: Routes = [
   { path: 'main', component: MainPageComponentnt },
@@ -20,7 +24,10 @@ const VERTICAL_ROUTES: Routes = [
   {path: 'property/:id',component: ProeprtyDetailsComponent},
   {path: 'propertymanager',component: PropertymanagerComponent },
   {path: 'addproperty', component: AddpropertyComponent},
+  {path: 'vendordashboard', component: DeveloperdashboardComponent },
+  {path: 'vendordetails/:id', component: DeveloperdetailsComponent },
   { path: '**', component: Page404Component },
+
   
 ];
 
@@ -50,13 +57,13 @@ export const ROUTES: Routes = [
   {
     path: 'vertical',
     component: VerticalLayoutComponent,
+    canActivate: [AuthGuardService],
     children: VERTICAL_ROUTES
   },
-  // {
-  //   path: 'developer',
-  //   component: VerticalLayoutComponent,
-  //   children: DEVELOPER_ROUTES
-  // },
+   {
+     path: 'signup',
+     component: SignupComponent
+  },
   {
     path: 'public',
     component: PublicLayoutComponent,

@@ -1,0 +1,119 @@
+
+<!-- Ng If first part . if data return then show in this form -->
+
+<tc-card class="mb-0" *ngIf="!showform">
+  <tc-table [rows]="vendordetailsarray" [hovered]="true" [pagination]="true" [headerBgColor]="'#336cfb'" [headerColor]="'#fff'">
+    
+    <tc-table-col [columnTitle]="'Company Title '" [columnName]="'developertitle'" [enableSorting]="true">
+      <ng-template #tableTDTemplate let-value>
+        <strong>{{ value }}</strong>
+      </ng-template>
+    </tc-table-col>
+    <tc-table-col [columnTitle]="'Location'" [columnName]="'developertitle'" [enableSorting]="true">
+      <ng-template #tableTDTemplate let-value>
+        <span [tcColor]="'#a5a5a5'" #id>{{ value }}</span>
+      </ng-template>
+    </tc-table-col>
+    
+    <tc-table-col [columnTitle]="'Company Address'" [columnName]="'telephonenumber'">
+      <ng-template #tableTDTemplate let-value>
+        <div class="address-col">{{ value }}</div>
+      </ng-template>
+    </tc-table-col>
+    <tc-table-col [columnTitle]="'Company Name'" [columnName]="'websiteurl'">
+      <ng-template #tableTDTemplate let-value>
+       <div class="address-col">
+       
+        {{ value }}
+      </div>
+      </ng-template>
+    </tc-table-col>
+
+    
+
+
+   
+    <tc-table-col [columnTitle]="'Vetted '" [columnName]="'vetted'" [enableSorting]="true">
+      <ng-template #tableTDTemplate let-value>
+        <tc-badge [view]="value === 'pending' ? 'success' : 'warning'">{{ value }}</tc-badge>
+      </ng-template>
+    </tc-table-col>
+    <tc-table-col [columnTitle]="'Actions'" [columnName]="'actions'">
+      <ng-template #tableTDTemplate let-row="row">
+        <div class="actions">
+          
+
+          
+
+          <button
+            tc-button
+            [afterIcon]="'icofont-ui-edit'"
+            [view]="'info'"
+            [square]="true"
+            [tcShape]="500"
+            [size]="'sm'"
+            (click)="remove(row.developerid)"
+          ></button>
+          
+        </div>
+      </ng-template>
+    </tc-table-col>
+  </tc-table>
+</tc-card>
+
+
+
+
+<!-- Ng If second part . if data does not return then show below form -->
+
+<div *ngIf="showform">
+ <h2 class="h4 mt-0 mb-1">Vendor Details</h2>
+<p [tcColor]="'#8f8f90'">Please enter your detailed information</p>
+
+<div class="row">
+<div class="col-12 col-md-8">
+<form [formGroup]="form"  novalidate>
+  <tc-form-group>
+    <tc-input [placeholder]="'Enter Title'" formControlName="vendorname"   ></tc-input>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-input [placeholder]="'Tell us a little bit about your company'" formControlName="developerdetails"  >    </tc-input>
+  </tc-form-group>
+
+  
+
+  
+ <tc-form-group>
+    <tc-input [placeholder]="'Telephone Number'" formControlName="mobilenumber"  ></tc-input>
+  </tc-form-group>
+
+ <tc-form-group>
+    <tc-input [placeholder]="'Website Url'" formControlName="websiteurl"  ></tc-input>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-input [placeholder]="'Userid'" formControlName="userid"  ></tc-input>
+  </tc-form-group>
+
+ 
+
+
+<div class="row" style="padding-top: 3rem;">
+  <div class="col-sm-6">
+    <button  tc-button [block]="true" [view]="'accent'" [beforeIcon]="'icofont-login'" (click)="submit()"        [disabled]="form.invalid" >
+      Submit Info
+    </button>
+</div>
+<div class="col-sm-6">
+     <button  tc-button [block]="true" [view]="'accent'" [beforeIcon]="'icofont-login'" (click)="reset()" >
+      Reset
+    </button>
+
+  </div>
+</div>
+</form>
+
+</div>
+</div> 
+</div>

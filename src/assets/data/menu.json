@@ -20,6 +20,13 @@
           "class": "icofont-thermometer-alt"
         },
         "routing": "propertymanager"
+      },
+      {
+        "title": "Vendor Dashboard",
+        "icon": {
+          "class": "icofont-thermometer-alt"
+        },
+        "routing": "vendordashboard"
       }
     ]
   },

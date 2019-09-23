@@ -13,7 +13,7 @@ import { UIModule } from './ui/ui.module';
 import { PagesModule } from './pages/pages.module';
 import { pageDataReducer } from './store/reducers/page-data.reducer';
 import { appSettingsReducer } from './store/reducers/app-settings.reducer';
-
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { appSettingsReducer } from './store/reducers/app-settings.reducer';
     UIModule,
     PagesModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

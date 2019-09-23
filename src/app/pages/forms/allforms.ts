@@ -18,26 +18,59 @@ export class AllformClass extends Baseformclass {
  	getloginform(){
 
  		return this.fb.group({
- 			username: ['', Validators.required],
- 			password: ['', Validators.required],
- 			role: ['', Validators.required],
+ 			email: ['', Validators.required],
+ 			password: ['', Validators.required]
  		});
 
  	}
 
 
+ 	signupform(){
+
+ 		return this.fb.group({
+ 			firstname: ['',Validators.required],
+ 			lastname: ['', Validators.required],
+ 			gender: ['', Validators.required],
+ 			dateofbirth: ['', Validators.required],
+ 			resedentialaddress: ['', Validators.required],
+ 			emailaddress: ['', Validators.required],
+ 			userpassword: ['', Validators.required],
+ 			mobilenumber: ['', Validators.required],
+ 			permanentaddress: ['', Validators.required]
+
+ 		});
+ 	}
+
+
+ 	vendordetails(){
+ 		return this.fb.group({
+ 			vendorname: ['',Validators.required],
+			developerdetails: ['', Validators.required],
+			mobilenumber: ['', Validators.required],
+			websiteurl: [''],
+			userid: ['', Validators.required]	
+ 		})
+ 	}
+
  	addpropertyform(){
 
  		return this.fb.group({
- 			propertyname: ['', Validators.required],
+ 			propertytitle: ['', Validators.required],
+ 			propertydescription: ['', Validators.required],
  			propertylocation: ['', Validators.required],
  			propertystatus: ['', Validators.required],
+ 			telephonenumber: ['', Validators.required],
  			requiredfunding: ['', Validators.required],
- 			propertydescription: ['', Validators.required],
- 			developerdescription: ['', Validators.required],
- 			websiteurl: [''],
+ 			acquiredfunding: [''],
  			holdingperiod: ['', Validators.required],
- 			currentinvestors: ['']
+ 			investors: ['']
+ 		})
+ 	}
+
+
+ 	getvendordetails(){
+ 		return this.fb.group({
+ 			userid: ['1', Validators.required]
  		})
  	}
 

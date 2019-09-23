@@ -1,0 +1,49 @@
+<h2 class="h4 mt-0 mb-1">Vendor Details</h2>
+<p [tcColor]="'#8f8f90'">Modify your details</p>
+
+<div class="row">
+<div class="col-12 col-md-8">
+<form [formGroup]="form"  novalidate>
+  <tc-form-group>
+    <tc-input [placeholder]="'Enter Title'" formControlName="vendorname"   ></tc-input>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-input [placeholder]="'Tell us a little bit about your company'" formControlName="developerdetails"  >    </tc-input>
+  </tc-form-group>
+
+  
+
+  
+ <tc-form-group>
+    <tc-input [placeholder]="'Telephone Number'" formControlName="mobilenumber"  ></tc-input>
+  </tc-form-group>
+
+ <tc-form-group>
+    <tc-input [placeholder]="'Website Url'" formControlName="websiteurl"  ></tc-input>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-input [placeholder]="'Userid'" formControlName="userid"  ></tc-input>
+  </tc-form-group>
+
+ 
+
+
+<div class="row" style="padding-top: 3rem;">
+  <div class="col-sm-6">
+    <button  tc-button [block]="true" [view]="'accent'" [beforeIcon]="'icofont-login'" (click)="submit()"        [disabled]="form.invalid" >
+      Submit Info
+    </button>
+</div>
+<div class="col-sm-6">
+     <button  tc-button [block]="true" [view]="'accent'" [beforeIcon]="'icofont-login'" (click)="reset()" >
+      Reset
+    </button>
+
+  </div>
+</div>
+</form>
+
+</div>
+</div> 

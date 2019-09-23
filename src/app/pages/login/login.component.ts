@@ -3,6 +3,9 @@ import { IOption } from '../../interfaces/patient';
 import { AllformClass } from '../forms/allforms';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpService } from '../../services/http/http.service';
+import { TCModalService } from '../../ui/services/modal/modal.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -28,21 +31,13 @@ export class LoginComponent implements OnInit {
 
 
   ]
-
-
-   form: FormGroup;
-
-  	constructor(private formclass : AllformClass,private router:Router) {
-
-
-
-
-   }
+  form: FormGroup;
+  
+  constructor(private formclass : AllformClass,private router:Router,private httpsv: HttpService,private modal: TCModalService) {
+ }
 
   ngOnInit() {
-  
   	this.form = this.formclass.getloginform();
-
   }
 
 
@@ -51,17 +46,23 @@ export class LoginComponent implements OnInit {
   login(){
 
 
-   console.log("Form values", this.form.value);
-	   if (this.form.value.role == 'Investor')
-		   {	
-		   	this.router.navigateByUrl('/vertical/investor');
+   
+   this.httpsv.loginservice(this.form.value)
+   	.subscribe(data=>{
+   		console.log(data);
+   		var dataparse = data;
+   		
+   		this.router.navigate(['vertical/investor']);	
+   	},
+   	error=>{
+   		this.modal.open({
+   			body: 'Username or password is incorrect',
+   			header: 'Login Error'
+   		})
 
-		   }
+   	})
 
-	   else if (this.form.value.role == 'Developer')
-		   {
-		   	this.router.navigateByUrl('/vertical/developer/propertymanager');
-		   }
+
 
   }
 

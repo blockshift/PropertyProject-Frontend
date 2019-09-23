@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 
 import { throwError as observableThrowError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
@@ -20,4 +20,35 @@ export class HttpService {
   private handleError(error: any) {
     return observableThrowError(error.error || 'Server error');
   }
+
+
+  loginservice(formvalues){
+    
+    let options = {
+          headers: new HttpHeaders({'Cache-Control': 'no-cache','Credentials': 'same-origin'}),
+          withCredentials: true
+    };
+    return this.http.post('http://localhost:4000/login',formvalues,options);
+    
+  }
+
+  signupservice(formvalues){
+
+    return this.http.post('http://localhost:4000/register',formvalues);
+
+
+
+
+  }
+
+
+  addvendordetails(formvalues){
+    return this.http.post('http://localhost:4000/vendordetails',formvalues);
+  }
+
+  getvendordetails(){
+    return this.http.get('http://localhost:4000/getvendordetails');
+  }
+
+
 }

@@ -5,18 +5,18 @@
 
 <form [formGroup]="form"  novalidate>
   <tc-form-group>
-    <tc-input [placeholder]="'Login'" formControlName="username" ></tc-input>
+    <tc-input [placeholder]="'Login'" formControlName="email" ></tc-input>
   </tc-form-group>
 
   <tc-form-group>
     <tc-input [placeholder]="'Password'" [type]="'password'" formControlName="password" ></tc-input>
   </tc-form-group>
 
-  <tc-form-group>
+<!--   <tc-form-group>
  <tc-select [placeholder]="'Select one option'" [options]="data" formControlName="role" ></tc-select>
  
   </tc-form-group>
-
+ -->
   <tc-form-group>
     <tc-switcher [value]="true">Remember me</tc-switcher>
   </tc-form-group>

@@ -1,0 +1,108 @@
+<div class="backgroundcolor">
+  <div class="row">
+    <div class="col-9 offset-2">
+        <h3> SignUp Form</h3>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col-9 col-md-6 offset-3">
+    <tc-card [view]="'info'" [title]="'Info'" [outline]="true" [tcBorderColor]="'#52280f'">
+     
+    <form [formGroup]="form"  novalidate>
+    <div class="row">
+      <div class="col-6">
+      <tc-form-group>
+            <tc-input [bgColor]="'transparent'" [borderColor]="'black'" [color]="'#64B5F6'" [placeholder]="'First Name'" formControlName="firstname" ></tc-input>
+      </tc-form-group>
+    </div>
+
+    <div class="col-6">
+      <tc-form-group>
+               <tc-input [bgColor]="'transparent'" [borderColor]="'black'" [color]="'#fff'" [placeholder]="'Last Name'" formControlName="lastname"  ></tc-input>
+      </tc-form-group>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="col-12 ">
+      <tc-form-group>
+        <tc-select [color]="['#fff', '#fff', '#64B5F6']"
+            [borderColor]="['black', 'black', 'black']"
+            [bgColor]="['transparent', 'transparent','transparent']"
+            [listBgColor]="'transparent'"
+            [listBorderColor]="'black'"
+            [listColor]="'#fff'" [placeholder]="'Select one option'" [options]="data" formControlName="gender" ></tc-select>
+      </tc-form-group>
+
+   </div>
+ </div>
+
+
+  
+
+  <div class="row">
+    <div class="col-12">
+      <tc-form-group>
+        <tc-input [bgColor]="'transparent'" [borderColor]="'black'" [color]="'black'" [placeholder]="'date of birth'" formControlName="dateofbirth"></tc-input>
+
+      </tc-form-group>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-12">
+      <tc-form-group>
+      <tc-input [bgColor]="'transparent'" [borderColor]="'black'" [color]="'black'" [placeholder]="'Resedential Address'" formControlName="resedentialaddress"></tc-input>
+    </tc-form-group>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <tc-form-group>
+      <tc-input [bgColor]="'transparent'" [borderColor]="'black'" [color]="'black'" [placeholder]="'Permanent Address'" formControlName="permanentaddress"></tc-input>
+    </tc-form-group>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-12">
+      <tc-form-group>
+      <tc-input [bgColor]="'transparent'" [borderColor]="'black'" [color]="'black'" [placeholder]="'Mobile Number'" formControlName="mobilenumber"></tc-input>
+    </tc-form-group>
+    </div>
+
+  </div>
+
+<div class="row">
+  <div class="col-6">
+    <tc-form-group>
+      <tc-input [bgColor]="'transparent'" [borderColor]="'black'" [color]="'#fff'" [placeholder]="'Email Address'" formControlName="emailaddress"></tc-input>
+
+    </tc-form-group>
+  </div>
+
+  <div class="col-6">
+    <tc-form-group>
+      <tc-input [bgColor]="'transparent'" [borderColor]="'black'" [color]="'#fff'" [placeholder]="'password'" formControlName="userpassword" [type]="'password'"></tc-input>
+    </tc-form-group>
+  </div>
+</div>
+
+
+  
+    <div class="actions justify-content-between">
+      <button  tc-button [view]="'accent'" [beforeIcon]="'icofont-login'" (click)="signup()" [disabled]="form.invalid" >
+        SignUp
+      </button>
+    </div>
+</form>
+
+    </tc-card>
+  </div>
+
+</div>

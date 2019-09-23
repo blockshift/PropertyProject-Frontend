@@ -5,7 +5,7 @@
 <div class="col-12 col-md-8">
 <form [formGroup]="form"  novalidate>
   <tc-form-group>
-    <tc-input [placeholder]="'Property Name'" formControlName="propertyname" ></tc-input>
+    <tc-input [placeholder]="'Property Name'" formControlName="propertytitle" ></tc-input>
   </tc-form-group>
 
   <tc-form-group>
@@ -26,26 +26,20 @@
     <tc-input [placeholder]="'Required Funding'" formControlName="requiredfunding" ></tc-input>
   </tc-form-group>
 
+<tc-form-group>
+    <tc-input [placeholder]="'Required Funding'" formControlName="acquiredfunding" ></tc-input>
+  </tc-form-group>
+ 
+
  <tc-form-group>
-    <tc-input [placeholder]="'Tell us a bit about you'" formControlName="developerdescription" ></tc-input>
+    <tc-input [placeholder]="'Website link'" formControlName="holdingperiod" ></tc-input>
   </tc-form-group>
 
  <tc-form-group>
-    <tc-input [placeholder]="'Website link'" formControlName="websiteurl" ></tc-input>
+    <tc-input [placeholder]="'Current Investors'" [type]="'number'" formControlName="investors" ></tc-input>
   </tc-form-group>
 
- <tc-form-group>
-    <tc-input [placeholder]="'Current Investors'" [type]="'number'" formControlName="currentinvestors" ></tc-input>
-  </tc-form-group>
 
-<tc-form-group class="avatar-box">
-        <input type="file" accept="image/*" (change)="onFileChanged($event)" #fileInput hidden>
-
-        <tc-avatar [src]="currentAvatar"></tc-avatar>
-        <button tc-button [type]="'button'"  [view]="'accent'" [outline]="true" (click)="fileInput.click()">
-          Select image
-        </button>
-      </tc-form-group>
  
 
 
